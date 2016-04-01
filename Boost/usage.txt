@@ -1,0 +1,5 @@
+Compiling with Boost:
+g++ -I /usr/include/boost <filename>.cpp -o <filename>
+
+Testing example.cpp:
+echo 1 2 3 | ./example
