@@ -19,4 +19,6 @@ int main() {
     std::stringstream(strInput) >> n;
 
     cout << "\nValue of factorial is: " << factorial(n);
+
+    return 0;
 }
