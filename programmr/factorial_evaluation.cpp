@@ -6,6 +6,7 @@ using std::cout;
 using std::cin;
 
 long factorial(const long &n) {
+    if (n == 0) return 1;
     for (long i = n; i > 1; i--) return n * factorial(i - 1);
 }
 
