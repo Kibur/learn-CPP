@@ -10,17 +10,17 @@
 
 std::string palindromeProduct(const int &k) {
     std::string strNorm, strRev;
-    const int max = pow(10, k) - 1;
-    int j = max;
+    const int MAX = pow(10, k) - 1;
+    int j = MAX;
 
     do {
-        for (int i = max; i > 0; i--) {
+        for (int i = MAX; i > 0; i--) {
             strNorm = strRev = std::to_string(i * j);
             std::reverse(strRev.begin(), strRev.end());
 
-            if (i % 10 == 0) break;
             if (strNorm.compare(strRev) == 0)
                 return strNorm + " = " + std::to_string(i) + " x " + std::to_string(j);
+            if (i % 10 == 0) break;
         }
 
         j--;
