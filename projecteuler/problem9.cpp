@@ -57,25 +57,14 @@ int productWhereSumABC(const int &s) {
     int a, b, c;
     a = b = c = 0;
     
-    for (int m = 5, temp; m < LEN; m++) {
+    for (int m = 5; m < LEN; m++) {
         for (int n = 4; n < m; n++) {
             if (a + b + c == s && is_primitive_Pythagorean_triple(a, b, c)) break;
             
             if (is_odd(m - n)) {
-                a = (m * m) - (n * n);
-                b = 2 * m * n;
+                a = 2 * m * n;
+                b = (m * m) - (n * n);
                 c = (m * m) + (n * n);
-                
-                if (a > b) {
-                    temp = a;
-                    a = b;
-                    b = temp;
-                }
-                if (b > c) {
-                    temp = b;
-                    b = c;
-                    c = temp;
-                }
             }
         }
     }
